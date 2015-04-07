@@ -1,0 +1,35 @@
+Topics:
+    -Basics for making a script
+        -Pick a shell interpreter
+        -Declare it
+        -Make the file executable
+            -Alternative ways of running the script
+        -What happens now?  A subshell is launched, and your commands run sequentially within that subshell
+    -Special characters
+        -I will use many of these, but I won't cover them explicitly, please read up on them independantly and reach out with questions
+        -http://www.tldp.org/LDP/abs/html/special-chars.html
+    -Basic Shell variables
+        -$1 $2 etc
+        -!$ $* $@ (More on arrays later)
+        -Intro to quoting (by example)
+    -Using a command within a script
+        -Why you use full path
+    -Capture a command output in a variable (exit code for success, or value for later use)
+    -Control Structure Basics
+        -Test (if/else)
+        -Loop basics (for loops)
+
+
+
+
+References:
+    BASH Scripting: http://www.tldp.org/LDP/abs/html/index.html (Old version:http://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO.html)
+    Internal Shell Variables: http://www.tldp.org/LDP/abs/html/internalvariables.html
+
+
+
+
+
+
+
+

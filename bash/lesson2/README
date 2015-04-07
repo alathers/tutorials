@@ -1,0 +1,77 @@
+    Topics:
+    Naming, Commenting and Basic style
+        -This too, can be automated if you want to
+    Intro to debugging in BASH
+    A glance at HERE documents 
+
+
+ Style:
+ 	One of the major challenges in code sharing is having code that's easily readable.  A lot of things factor in to this.
+ 		-Using well named variables
+ 		-Using well named scripts and tools
+ 			-script.sh won't really tell someone what a tool does
+ 			-similarly thatScriptThatDoesAllThingsCert.sh is both an awful pain to type, and still not really meaningful
+ 			-Rely on a good simple name, and comments
+ 			-Make sure to also include context, assumptions, use cases, and anything else that can help someone self-start
+ 			-Assume that the next person to use a tool you write won't be able to ask you questions, or read your command history.
+ 				-This means put all the tools for self-teaching INTO the scripts somewhere (header or footer)
+ 			-Consistency goes a long way too.  Even if your style is a little challenging at first, if it's consistent then the learning curve only happens once per developer
+ 		-There are a LOT of opinions out there one what's right.  
+ 			-The closest you'll really get to "right" is what makes your whole team most effective
+ 		-One great way to remain consistent?  AUTOMATE!  (Ok I've never even done this, but I keep meaning to!)
+        -Style includes everything from layout to variable naming and syntax preferences.  Some languages have required naming standards for variables, others have loose suggestions.  BASH for example suggests that you use all caps for internal shell and environment variables, and lowercase for all other variables
+
+
+
+ Starting Point:
+ 	-First look at foremanComments.sh
+ 	-I wrote this in a hurry some time ago as a hack, and I did basically everything wrong
+ 	-The name tells you it's for something related to foreman...somehow
+ 	-If you're good about reading the code, you might get that it outputs a JSON blob
+ 	-I failed to include any more useful information
+
+ Step 1 - > step1.sh
+ 	-Good start.  There's a developer name, and date
+ 	-There isn't much else
+
+
+Step 2 ->  makeScriptStub-start.sh
+ 	-Developer name
+ 	-Date
+ 	-Changelog
+ 	-Feature request list
+ 	-Bug List
+ 	-It has some room to optimize.  For example there is now a template file that's also needed along with the script.  There is no error handling in case a filename is not provided, or if the template is missing. 
+d
+
+ Step 3 -> Make it all in 1 file to make it clean and easy to maintain.  See: makeScriptStub-AllInOne.shcd
+ 	-Be aware this example might be overly bloated. It's meant to demonstrate various pieces of information that are useful, but not the only way to solve the issue
+ 	-Consider the information you need to convey, and focus on that end goal over all else
+    -Hyper consolidation is just 1 approach
+
+Step 4 -> Split pieces into source files.  See the subfolder: SeparateSourceFilesExample
+    -Use a config file for variables
+    -Use a text source file for the output template
+
+
+Bonus round: On your own time, work with, and fix makeScriptStub-AllInOne-Broken.sh
+    -Modify the script to use the -x flag for debug.  This can be with the shebang, or it can be form the command line directly
+    -Also try the -v flag for verbose mode
+    -For more info: http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_02_03.html
+
+
+
+HOMEWORK:
+    This is for your own practice.  Take all of the examples, and modify them
+        -Put your own information into place
+        -Make sure each of the systems work
+        -Debug the example broken script
+        -Add some of the listed features to the scripts based on their header info (Don't forget to update the changelog and bug list and such)
+
+
+
+
+
+References:
+    BASH Scripting: http://www.tldp.org/LDP/abs/html/index.html (Old version:http://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO.html)
+    Internal Shell Variables: http://www.tldp.org/LDP/abs/html/internalvariables.html

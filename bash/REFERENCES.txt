@@ -1,0 +1,14 @@
+
+
+BASH Scripting: http://www.tldp.org/LDP/abs/html/index.html (Old version:http://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO.html)
+Internal Shell Variables: http://www.tldp.org/LDP/abs/html/internalvariables.html
+
+
+Tutorials and Docs:
+http://beginlinux.com/command-line/shells/1395-bash-script
+http://www.pluralsight.com/courses/bash-shell-scripting
+http://wiki.bash-hackers.org/scripting/tutoriallist
+
+
+Google BASH Style guide: https://google-styleguide.googlecode.com/svn/trunk/shell.xml
+TLDP Style guide: http://tldp.org/LDP/abs/html/unofficialst.html
